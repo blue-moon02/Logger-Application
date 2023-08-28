@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineLogsReader</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="title-wrapper">
+        <img src="download.png" alt="Title Image" class="title-image">
+      </div>
+    <div class="alert" hidden>
+        <span>
+            User connected
+        </span>
+        <span id="alert__close">X</span>
+    </div>
+    <div class="controls">
+        <label for="filepath">Enter log file location:</label>
+        <div class="input-wrapper">
+          <input type="text" id="filepath" placeholder="e.g. test.log" />
+        </div>
+      </div>
+      
+      <div class="controls">
+        <div class="button-group">
+          <button id="control__start">Start</button>
+          <button id="control__pause" disabled>Pause</button>
+          <button id="control__stop" disabled>Stop</button>
+        </div>
+      </div>
+    <div class="logview">
+        <div class="logs">
+
+        </div>
+        <p class="paused">------------------------------------ PAUSED ------------------------------------</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
